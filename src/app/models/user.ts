@@ -1,7 +1,7 @@
-export interface User {
-    UserId: number;
-    AuthName: string;
-    UserName: string;
-    ProfilePicture: string;
-    Bio: String
+export interface EndUser {
+    userId: number;
+    authName: string;
+    username: string;
+    profilePicture: string;
+    bio: String
 }
