@@ -36,7 +36,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
       clientId: environment.auth.clientId,
       authorizationParams: {
         redirect_uri: window.location.origin,
-        audience: "http://localhost7155/api"
+        audience: "finalproject120231211204040.azurewebsites.net"
       }
     })
   ],
