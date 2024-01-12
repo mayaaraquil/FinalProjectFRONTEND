@@ -12,17 +12,24 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-        with:
-          submodules: true
-          lfs: false
 
-      - name: Build And Deploy
-        id: builddeploy
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # Replace with your Node.js version
+
+      - name: Install npm dependencies
+        run: npm install
+
+      - name: Build the Angular app
+        run: ng build --prod
+        # Replace '--prod' with appropriate build command options for your project
+
+      - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_CALM_BEACH_0BA26880F }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          deployment_action: "upload"
-          app_location: "/" # App source code path
-          api_location: "" # Api source code path - optional
-          output_location: "dist/final-project-frontend" # Built app content directory - optional
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }} 
+          app_location: "/" # The location of your app code
+          api_location: "" # The location of your API code (if applicable)
+          output_location: "dist/final-project-frontend" # The build output directory
