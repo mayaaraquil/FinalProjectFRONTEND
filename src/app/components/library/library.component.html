@@ -1,0 +1,10 @@
+
+<div>
+    <div *ngFor="let song of library">
+        <p>{{song.name}}</p>
+        <div *ngFor="let artist of song.artists">
+            <p>{{artist.name}}</p>
+        </div>
+        <button (click)="onClick(song.id)">Remove Song</button>
+    </div>
+</div>

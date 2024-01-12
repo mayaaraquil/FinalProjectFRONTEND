@@ -1,0 +1,15 @@
+
+
+<div>
+    <input class="form-control" type="text" [(ngModel)]="searchTerm" placeholder="song" />
+    <button (click)="onSubmit()">Submit</button>
+</div>
+
+<div *ngFor="let track of tracks">
+    <p>{{track.name}}</p>
+    <p>Artists</p>
+    <div *ngFor="let artist of track.artists">
+        <p>{{artist.name}}</p>
+    </div>
+    <button (click)="onClick(track.id)">Save</button>
+</div>

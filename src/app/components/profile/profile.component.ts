@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
 import { AuthService, User } from '@auth0/auth0-angular';
 import { UserService } from 'src/app/services/user.service';
 import { EndUser } from 'src/app/models/user';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
