@@ -15,6 +15,9 @@ import { environment } from 'src/environments/environment';
 import { AuthButtonComponent } from './components/auth-button/auth-button.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SpotifyloginComponent } from './components/spotifylogin/spotifylogin.component';
+import { SeachSongsComponent } from './components/seach-songs/seach-songs.component';
+import { LibraryComponent } from './components/library/library.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     NavbarComponent,
     ProfileComponent,
-    AuthButtonComponent
+    AuthButtonComponent,
+    SpotifyloginComponent,
+    SeachSongsComponent,
+    LibraryComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
       }
     })
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
