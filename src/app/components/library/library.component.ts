@@ -20,7 +20,6 @@ export class LibraryComponent {
       for(let i = 0; i < this.templibrary.length; i ++){
         this.spotifyService.GetSong(this.templibrary[i].spotifySongId).subscribe(song => {
           this.library.push(song);
-          console.log(song)
         })
       }
     });

@@ -3,7 +3,7 @@ import { PostTypes } from "./post-types";
 export interface Comments {
     CommentId: number;
     CommentText: string;
-    UserId: number;
+    AuthId: string;
     PostType: PostTypes;
     BlogId?: number;
     PlaylistId?: number;

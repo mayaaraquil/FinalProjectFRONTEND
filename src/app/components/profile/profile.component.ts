@@ -86,7 +86,6 @@ export class ProfileComponent {
 
   onClick(){
      const formData: EndUser = this.updateUser.getRawValue() as unknown as EndUser;
-     console.log(formData);
 
      if(formData.username !== ""){
         this.user.username = formData.username
@@ -103,7 +102,6 @@ export class ProfileComponent {
   }
 
   deleteProfile():void{
-    console.log(this.user.userId);
     this.userservice.deleteUser(this.user.userId).subscribe();
   }
 }

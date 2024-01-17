@@ -28,19 +28,27 @@ export class SpotifyService {
       const token = hash.substring(1).split('&').find(elem => elem.startsWith('access_token'))?.split('=')[1];
       if (token) {
         // Save the token and use it for future requests
-        console.log(token);
         localStorage.setItem("Spotifytoken", token);
+        localStorage.setItem("Expiration", `${Date.now() + (55 * 60 * 1000)}`)
       }
     }
   }
 
   SearhcSongs(searchTerm: string): Observable<Spotifysong> {
+    this.ExpirationCheck();
     var spotify = "https://api.spotify.com/v1/search";
     return this.client.get<Spotifysong>(`${spotify}?q=${searchTerm}&type=track`);
   }
 
   GetSong(spotifyid: string):Observable<Spotifysong>{
+    this.ExpirationCheck();
     var spotify = "https://api.spotify.com/v1/tracks";
     return this.client.get<Spotifysong>(`${spotify}/${spotifyid}`);
+  }
+
+  ExpirationCheck(){
+    if(localStorage.getItem("Expiration") === null || Date.now().toString() >= localStorage.getItem("Expiration")!){
+      this.redirectToSpotifyLogin();
+     } 
   }
 }
