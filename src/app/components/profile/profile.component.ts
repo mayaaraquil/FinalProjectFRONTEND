@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
 import { AuthService, User } from '@auth0/auth0-angular';
 import { UserService } from 'src/app/services/user.service';
 import { EndUser } from 'src/app/models/user';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -86,7 +86,6 @@ export class ProfileComponent {
 
   onClick(){
      const formData: EndUser = this.updateUser.getRawValue() as unknown as EndUser;
-     console.log(formData);
 
      if(formData.username !== ""){
         this.user.username = formData.username
@@ -103,7 +102,6 @@ export class ProfileComponent {
   }
 
   deleteProfile():void{
-    console.log(this.user.userId);
     this.userservice.deleteUser(this.user.userId).subscribe();
   }
 }

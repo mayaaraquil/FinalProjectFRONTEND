@@ -1,0 +1,16 @@
+
+div{
+        
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background: purple;
+    border: 2px plum solid;
+    border-radius: 100px;
+    width: 50%;
+    margin-left: 25%;
+}
