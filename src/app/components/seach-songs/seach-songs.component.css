@@ -1,0 +1,22 @@
+
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: plum 2px solid;
+    background-color: purple;
+    border-radius: 100px;
+    width: 50%;
+    margin-left: 25%; 
+    overflow: hidden;
+}
+
+.container{
+    flex-direction: column;
+}
+
+.artist{
+    border: none;
+    margin-left: 0;
+}

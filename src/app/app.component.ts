@@ -11,11 +11,24 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class AppComponent {
   title = 'final-project-frontend';
 
+  tokenExists :boolean = false;
+
   constructor(private spotifyService: SpotifyService) {}
 
   loginWithSpotify() : void{
     this.spotifyService.redirectToSpotifyLogin();
   }
 
+  checkForToken(){
+    if(localStorage.getItem("SpotifyToken") ){
+      this.tokenExists = true;
+    }else{
+      this.tokenExists = false;
+    }
+  }
+
+  ngOnInit(){
+    this.checkForToken();
+  }
  
 }
