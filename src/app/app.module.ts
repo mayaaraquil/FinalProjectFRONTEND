@@ -15,6 +15,8 @@ import { environment } from 'src/environments/environment';
 import { AuthButtonComponent } from './components/auth-button/auth-button.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BlogComponent } from './components/blog/blog.component';
+import { CreateBlogFormComponent } from './components/create-blog-form/create-blog-form.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     NavbarComponent,
     ProfileComponent,
-    AuthButtonComponent
+    AuthButtonComponent,
+    BlogComponent,
+    CreateBlogFormComponent
   ],
   imports: [
     BrowserModule,

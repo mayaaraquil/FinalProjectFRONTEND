@@ -1,4 +1,5 @@
 import { PostTypes } from "./post-types";
+import {Blog}
 
 export interface Comments {
     CommentId: number;
