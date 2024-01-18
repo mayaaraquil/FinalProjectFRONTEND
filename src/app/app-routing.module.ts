@@ -7,6 +7,7 @@ import { LibraryComponent } from './components/library/library.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { CreateBlogFormComponent } from './components/create-blog-form/create-blog-form.component';
+import { VideoComponent } from './components/video/video.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
     {path: 'search', component:SeachSongsComponent},
     {path: 'library', component:LibraryComponent},
     {path: 'blogs', component:BlogComponent},
-    {path: 'createBlog', component:CreateBlogFormComponent}
+    {path: 'createBlog', component:CreateBlogFormComponent},
+    {path: 'video', component:VideoComponent}
 ];
 
 @NgModule({

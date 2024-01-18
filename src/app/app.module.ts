@@ -22,6 +22,7 @@ import { CreateBlogFormComponent } from './components/create-blog-form/create-bl
 import { SpotifyloginComponent } from './components/spotifylogin/spotifylogin.component';
 import { SeachSongsComponent } from './components/seach-songs/seach-songs.component';
 import { LibraryComponent } from './components/library/library.component';
+import { VideoComponent } from './components/video/video.component';
 
 
 
@@ -38,7 +39,8 @@ import { LibraryComponent } from './components/library/library.component';
     CreateBlogFormComponent,
     SpotifyloginComponent,
     SeachSongsComponent,
-    LibraryComponent
+    LibraryComponent,
+    VideoComponent
 
   ],
   imports: [
