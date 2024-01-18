@@ -39,7 +39,7 @@ export class ProfileComponent {
     this.auth.user$.subscribe(
       (profile) => { 
         (this.profileJson = profile),
-        (this.userId = this.profileJson?.email),
+        (this.userId = this.profileJson?.sub)
         this.userservice.getUsers().subscribe(
           (user) => {
             (this.userProfiles = user),
