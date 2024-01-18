@@ -20,6 +20,7 @@ export class BlogComponent implements OnInit {
   loadBlogs() :void{
     this.blogService.getAllBlogs().subscribe((blogs: Blog[]) => {
       this.blogs = blogs;
+      console.log(this.blogs)
     });
   }
 

@@ -1,4 +1,4 @@
 export interface BlogCreator {
-    BlogTitle: string,
-    BlogContent: string
+    blogTitle: string,
+    blogContent: string
 }

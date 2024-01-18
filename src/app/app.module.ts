@@ -35,8 +35,7 @@ import { LibraryComponent } from './components/library/library.component';
     AuthButtonComponent,
 
     BlogComponent,
-    CreateBlogFormComponent
-
+    CreateBlogFormComponent,
     SpotifyloginComponent,
     SeachSongsComponent,
     LibraryComponent

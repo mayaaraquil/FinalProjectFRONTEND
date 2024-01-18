@@ -5,6 +5,8 @@
         <div *ngFor="let artist of song.artists">
             <p>{{artist.name}}</p>
         </div>
+        <img src={{song.album.images[0].url}} />
+
         <button (click)="onClick(song.id)">Remove Song</button>
     </div>
 </div>
